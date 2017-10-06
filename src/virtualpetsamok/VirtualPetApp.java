@@ -3,7 +3,7 @@ package virtualpetsamok;
 //import java.util.Scanner;
 
 public class VirtualPetApp {
-
+	//user input switch case to determine class
 }
 /*
 Scanner input = new Scanner(System.in);

@@ -26,10 +26,12 @@ public class VirtualPetShelter {
 	 public void showPets(VirtualPet adoptablePet) {
 		 
 		  for (Entry<String, VirtualPet> entry : myShelter.entrySet()) {
-		  System.out.println("Name : " + entry.getKey() + " \tType : " +
-		  entry.getValue().getPetType() + "\tHealth " +
+		  entry.getValue();
+		System.out.println("Name : " + entry.getKey() + " \tType : " +
+		  VirtualPet.getPetType() + "\tHealth " +
 		  entry.getValue().getPetHealth() + "\tHappiness: " +
-		  entry.getValue().getPetHappiness()}
+		  entry.getValue().getPetHappiness()); }
+		  }
 
 	public void feedPets(VirtualPet adoptablePet) {
 		for (VirtualPet pet : availablePets()) {
@@ -38,20 +40,10 @@ public class VirtualPetShelter {
 				organicPet.feed();
 			}
 		}
-		//user input switch case to determine class
 	}
 }
 /*
 
- * public void showPets(VirtualPet adoptablePet) {
- * 
- * for (Entry<String, VirtualPet> entry : myShelter.entrySet()) {
- * System.out.println("Name : " + entry.getKey() + " \tType : " +
- * entry.getValue().getPetType() + "\tInterest: " +
- * entry.getValue().getPetInterest() + "\tNutrition: " +
- * entry.getValue().getPetNutrition() + "\tHydration: " +
- * entry.getValue().getPetHydration()); } }
- * 
  * public VirtualPet getPetNamed(String name) { return myShelter.get(name); }
  * 
  * public void showPetName(VirtualPet adoptablePet) {

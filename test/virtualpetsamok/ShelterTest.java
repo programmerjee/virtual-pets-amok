@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class _02_VirtualPetAmokTest {
+public class ShelterTest {
 	@Test
 	public void shouldBeAbleToShowPets() {
 	VirtualPet aPet = new OrganicDog("Bud", "dog", 10, 10, 10, 10, 10);

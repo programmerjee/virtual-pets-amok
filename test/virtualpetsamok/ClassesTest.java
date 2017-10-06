@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import virtualpetsamok.VirtualPet;
 
-public class _01_VirtualPetAmokTest {
+public class ClassesTest {
 	
 	@Test
 	public void shouldCreateAOrganicDog() {
