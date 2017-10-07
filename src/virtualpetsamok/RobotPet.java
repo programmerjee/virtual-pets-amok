@@ -1,9 +1,11 @@
 package virtualpetsamok;
 
 public interface RobotPet {
-	public static void oil() {
-	}
-	public static void checkHealth() {
-	}
+	public void oil();
+	
+	public void checkHealth();
+	
+	public void tick();
+	
 
 }

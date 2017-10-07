@@ -131,7 +131,7 @@ public class ClassesTest {
 	@Test
 	public void shouldBeAbleToCleanLitterBox() {
 		OrganicCat underTest = new OrganicCat("Scratchy", "cat", 10, 10, 10, 10, 10);
-		underTest.cleanLitterBox();
+		underTest.emptyLitterBox();
 		int check = underTest.getCleanliness();
 		assertEquals(15, check);
 	}

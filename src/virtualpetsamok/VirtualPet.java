@@ -1,10 +1,10 @@
 package virtualpetsamok;
 
 public abstract class VirtualPet {
-	public static String petName;
-	public static String petType;
-	public static int petHappiness;
-	public static int petHealth;
+	public  String petName;
+	public  String petType;
+	public  int petHappiness;
+	public  int petHealth;
 
 	public VirtualPet(String name, String type, int happiness, int health) {
 		petName = name;
@@ -13,36 +13,36 @@ public abstract class VirtualPet {
 		petHealth = health;
 	}
 
-	public static String getPetName() {
+	public String getPetName() {
 		return petName;
 	}
 
-	public static void setPetName(String petName) {
-		VirtualPet.petName = petName;
+	public void setPetName(String petName) {
+		this.petName = petName;
 	}
 
-	public static String getPetType() {
+	public String getPetType() {
 		return petType;
 	}
 
-	public static void setPetType(String petType) {
-		VirtualPet.petType = petType;
+	public void setPetType(String petType) {
+		this.petType = petType;
 	}
 
 	public int getPetHappiness() {
 		return petHappiness;
 	}
 
-	public static void setPetHappiness(int petHappiness) {
-		VirtualPet.petHappiness = petHappiness;
+	public void setPetHappiness(int petHappiness) {
+		this.petHappiness = petHappiness;
 	}
 
 	public int getPetHealth() {
 		return petHealth;
 	}
 
-	public static void setPetHealth(int petHealth) {
-		VirtualPet.petHealth = petHealth;
+	public void setPetHealth(int petHealth) {
+		this.petHealth = petHealth;
 	}
 
 	public void play() {
