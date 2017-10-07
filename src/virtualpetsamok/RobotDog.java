@@ -3,8 +3,8 @@ package virtualpetsamok;
 public class RobotDog extends Dog implements RobotPet {
 	
 	int maintenance = 10;
-	public RobotDog(String name, String type, int happiness, int health, int maintenance) {
-		super(name, type, happiness, health);
+	public RobotDog(String name, int happiness, int health, int maintenance) {
+		super(name, happiness, health);
 		this.maintenance = maintenance;
 		
 	}
@@ -27,6 +27,9 @@ public class RobotDog extends Dog implements RobotPet {
 		if (maintenance ==0) {
 			petHealth=0;
 		}
+	}
+	@Override
+	public void cleanCages() {
 	}
 
 }

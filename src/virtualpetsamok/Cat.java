@@ -2,8 +2,8 @@ package virtualpetsamok;
 
 public class Cat extends VirtualPet{
 
-	public Cat(String name, String type, int happiness, int health) {
-		super(name, type, happiness, health);
+	public Cat(String name, int happiness, int health) {
+		super(name, happiness, health);
 		// TODO Auto-generated constructor stub
 	}
 

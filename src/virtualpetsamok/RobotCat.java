@@ -2,8 +2,8 @@ package virtualpetsamok;
 
 public class RobotCat extends Cat implements RobotPet{
 	int maintenance = 10;
-	public RobotCat(String name, String type, int happiness, int health, int maintenance) {
-		super(name, type, happiness, health);
+	public RobotCat(String name, int happiness, int health, int maintenance) {
+		super(name, happiness, health);
 		this.maintenance=maintenance;
 	}
 	public int getMaintenance() {
@@ -20,6 +20,9 @@ public class RobotCat extends Cat implements RobotPet{
 	}
 	public void oil() {
 		maintenance +=5;
+	}
+	@Override
+	public void checkHealth() {
 	}
 
 }

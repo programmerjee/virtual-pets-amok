@@ -1,10 +1,10 @@
 package virtualpetsamok;
 
-public class Dog extends VirtualPet{
+public abstract class Dog extends VirtualPet{
 	
 
-	public Dog(String name, String type, int happiness, int health) {
-		super(name, type, happiness, health);
+	public Dog(String name, int happiness, int health) {
+		super(name, happiness, health);
 	}
 	public void walk() {
 		petHappiness +=5;
@@ -14,6 +14,7 @@ public class Dog extends VirtualPet{
 		petHappiness-=1;
 		petHealth-=1;
 	}
+	public abstract void cleanCages();
 	
 	
 	

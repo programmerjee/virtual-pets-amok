@@ -2,13 +2,11 @@ package virtualpetsamok;
 
 public abstract class VirtualPet {
 	public  String petName;
-	public  String petType;
 	public  int petHappiness;
 	public  int petHealth;
 
-	public VirtualPet(String name, String type, int happiness, int health) {
+	public VirtualPet(String name, int happiness, int health) {
 		petName = name;
-		petType = type;
 		petHappiness = happiness;
 		petHealth = health;
 	}
@@ -19,14 +17,6 @@ public abstract class VirtualPet {
 
 	public void setPetName(String petName) {
 		this.petName = petName;
-	}
-
-	public String getPetType() {
-		return petType;
-	}
-
-	public void setPetType(String petType) {
-		this.petType = petType;
 	}
 
 	public int getPetHappiness() {

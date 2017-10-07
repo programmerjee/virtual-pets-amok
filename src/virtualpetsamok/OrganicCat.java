@@ -5,8 +5,8 @@ public class OrganicCat extends Cat implements Organic {
 	int thirst = 10;
 	int cleanliness = 10;
 	
-	public OrganicCat(String name, String type, int happiness, int health, int hunger, int thirst, int cleanliness) {
-		super(name, type, happiness, health);
+	public OrganicCat(String name, int happiness, int health, int hunger, int thirst, int cleanliness) {
+		super(name, happiness, health);
 		this.hunger = hunger;
 		this.thirst = thirst;
 		this.cleanliness = cleanliness;

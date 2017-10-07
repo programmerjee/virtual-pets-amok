@@ -4,8 +4,8 @@ public class OrganicDog extends Dog implements Organic{
 	int hunger = 10;
 	int thirst = 10;
 	int cleanliness = 10;
-	public OrganicDog(String name, String type, int happiness, int health, int hunger, int thirst, int cleanliness) {
-		super(name, type, happiness, health);
+	public OrganicDog(String name, int happiness, int health, int hunger, int thirst, int cleanliness) {
+		super(name, happiness, health);
 		this.hunger = hunger;
 		this.thirst = thirst;
 		this.cleanliness = cleanliness;

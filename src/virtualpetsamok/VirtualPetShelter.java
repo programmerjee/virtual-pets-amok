@@ -6,16 +6,12 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public class VirtualPetShelter {
-	VirtualPet organicDog = new OrganicDog(null, null, 0, 0, 0, 0, 0);
-	VirtualPet organicCat = new OrganicCat(null, null, 0, 0, 0, 0, 0);
-	VirtualPet robotDog = new RobotDog(null, null, 0, 0, 0);
-	VirtualPet robotCat = new RobotCat(null, null, 0, 0, 0);
+
 	Map<String, VirtualPet> myShelter = new HashMap<String, VirtualPet>();
 
 	public Collection<VirtualPet> availablePets() {
 		return myShelter.values();
 	}
-
 	public void addPet(VirtualPet adoptablePet) {
 		String petsAvailable = adoptablePet.getPetName();
 		myShelter.put(petsAvailable, adoptablePet);
@@ -29,15 +25,8 @@ public class VirtualPetShelter {
 
 		for (Entry<String, VirtualPet> entry : myShelter.entrySet()) {
 			entry.getValue();
-			System.out.println("Name : " + entry.getKey() + " \tType : " + adoptablePet.getPetType() + "\tHealth "
+			System.out.println("Name : " + entry.getKey() + "\tHealth "
 					+ entry.getValue().getPetHealth() + "\tHappiness: " + entry.getValue().getPetHappiness());
-		}
-	}
-
-	public void showPetName() {
-
-		for (Entry<String, VirtualPet> entry : myShelter.entrySet()) {
-			System.out.print(entry.getKey() + "\t");
 		}
 	}
 
@@ -82,18 +71,43 @@ public class VirtualPetShelter {
 			}
 		}
 	}
+
+	public boolean hasPets() {
+		
+		return !myShelter.isEmpty();
+	}
+	public void cleanCages() {
+		for (VirtualPet pet : availablePets()) {
+			if (pet instanceof OrganicDog) {
+				OrganicDog organicDog = (OrganicDog) pet;
+				organicDog.cleanCages();
+			}
+		}
+	}
+	public void emptyLitterBox() {
+		for (VirtualPet pet : availablePets()) {
+			if (pet instanceof OrganicCat) {
+				OrganicCat organicCat = (OrganicCat) pet;
+				organicCat.emptyLitterBox();
+			}
+		}
+	}
+	public void walkDogs() {
+		for (VirtualPet pet : availablePets()) {
+			if (pet instanceof Dog) {
+				Dog aDog = (Dog) pet;
+				aDog.walk();
+			}
+		}
+	}
+	public void showPetName(VirtualPet pets) {
+		for (Entry<String, VirtualPet> entry : myShelter.entrySet()) {
+			System.out.print(entry.getKey() + "\t");
+		}
+	}
+	//public VirtualPet getPetNamed(String chosenPet) {
+		
+		//return myShelter.get(name);
+	//}
 }
 
-/*
- * 
- * 
- * public void showTypes(VirtualPet adoptablePet) { for (Entry<String,
- * VirtualPet> entry : myShelter.entrySet()) { System.out.println("Name : " +
- * entry.getKey() + "\tType: " + entry.getValue().getPetType()); }
- * 
- * }
- * 
- * 
- * 
- * public boolean hasPets() { return !myShelter.isEmpty(); }
- */
