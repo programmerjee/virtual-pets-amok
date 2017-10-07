@@ -35,34 +35,40 @@ public class VirtualPetApp {
 			case "1": // feed all organics
 				myShelter.tickAllPets(pets);
 				myShelter.feedPets();
+				System.out.println("All of the organic cats and dogs have been fed!");
 				break;
 			case "2": // water all organics
 				myShelter.tickAllPets(pets);
 				myShelter.waterAllPets();
+				System.out.println("All of the organic cats and dogs have water available.");
 				break;
 			case "3": // clean dog cages
 				myShelter.tickAllPets(pets);
 				myShelter.cleanCages();
+				System.out.println("The dog cages are smelling fresh!");
 				break;
 			case "4": // clean litter box
 				myShelter.tickAllPets(pets);
 				myShelter.emptyLitterBox();
+				System.out.println("The litter box smells much better.");
 				break;
 			case "5": // walk all dogs
 				myShelter.tickAllPets(pets);
 				myShelter.walkDogs();
+				System.out.println("The dogs are happy (and less likely to need their cage cleaned.");
 				break;
 			case "6": // oil robots
 				myShelter.tickAllPets(pets);
 				myShelter.oilRobots();
+				System.out.println("The robots are nice and shiny!");
 				break;
 			case "7": // play with a pet
 				myShelter.tickAllPets(pets);
 				System.out.println("Which pet would you like to play with?");
 				myShelter.showPetName(pets);
 				String chosenPet = input.next();
-				// VirtualPet playPet = myShelter.getPetNamed(chosenPet);
-				// playPet.play();
+				VirtualPet playPet = myShelter.getPetNamed(chosenPet);
+				playPet.play();
 				System.out.println(chosenPet + " had a lot of fun!  He's starting to get tired.");
 				break;
 			case "8": // adopt a pet
@@ -77,31 +83,35 @@ public class VirtualPetApp {
 				myShelter.tickAllPets(pets);
 				System.out.println("Do you have a: \n\tA. Organic Dog \n\t B. Organic Cat \n\t C. Robot Dog \n\t D. Robot Cat");
 				String petType = input.next();
-				switch (petType) {
+				switch (petType.toUpperCase()) {
 				case "A"://odog
 					System.out.println("What will you name the new dog?");
 					String oDogName = input.next();
 					VirtualPet newODog = new OrganicDog(oDogName, 10, 10, 10, 10, 10);
 					myShelter.addPet(newODog);
+					break;
 				case "B"://ocat
 					System.out.println("What will you name the new cat?");
 					String oCatName = input.next();
 					VirtualPet newOCat = new OrganicDog(oCatName, 10, 10, 10, 10, 10);
 					myShelter.addPet(newOCat);
+					break;
 				case "C"://rcat
 					System.out.println("What will you name the new dog?");
 					String rDogName = input.next();
 					VirtualPet newRDog = new OrganicDog(rDogName, 10, 10, 10, 10, 10);
 					myShelter.addPet(newRDog);
-				case "D"://rdog
+					break;
+				case "D":
 					System.out.println("What will you name the new cat?");
 					String rCatName = input.next();
 					VirtualPet newRCat = new OrganicDog(rCatName, 10, 10, 10, 10, 10);
 					myShelter.addPet(newRCat);
+					break;
 				}
 				System.out.println("Welcome to your new home!" );
 				break;
-			case "10": // show all pets
+			case "10": 
 				System.out.println("These are the pets at our shelter:");
 				myShelter.showPets(pets);
 				break;

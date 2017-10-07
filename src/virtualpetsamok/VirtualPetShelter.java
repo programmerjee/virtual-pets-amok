@@ -29,6 +29,9 @@ public class VirtualPetShelter {
 					+ entry.getValue().getPetHealth() + "\tHappiness: " + entry.getValue().getPetHappiness());
 		}
 	}
+	public VirtualPet getPetNamed(String name) {
+		return myShelter.get(name);
+	}
 
 	public void feedPets() {
 		for (VirtualPet pet : availablePets()) {

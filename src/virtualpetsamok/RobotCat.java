@@ -23,6 +23,9 @@ public class RobotCat extends Cat implements RobotPet{
 	}
 	@Override
 	public void checkHealth() {
+		if (maintenance ==0) {
+			petHealth=0;
+		}
 	}
 
 }
