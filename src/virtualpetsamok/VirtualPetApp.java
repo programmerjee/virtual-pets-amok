@@ -26,10 +26,6 @@ public class VirtualPetApp {
 		while (myShelter.hasPets()) {
 			do {System.out.println(showMenu);
 			userChoice = input.next();
-			} while (!userChoice.equals("1") && !userChoice.equals("2") && !userChoice.equals("3")
-					&& !userChoice.equals("4") && !userChoice.equals("5") && !userChoice.equals("6")
-					&& !userChoice.equals("7") && !userChoice.equals("8") && !userChoice.equals("9")
-					&& !userChoice.equals("10") && !userChoice.equals("11"));
 			switch (userChoice) {
 			case "1": // feed all organics
 				myShelter.tickAllPets(pets);
@@ -119,7 +115,10 @@ public class VirtualPetApp {
 				System.out.println("Thank you for volunteering at the County Shelter.\nGoodbye!");
 				System.exit(0);
 				break;
+			default: 
+				System.out.println("Invalid option.");
 			}
+			} while (!myShelter.hasPets());
 
 		}
 

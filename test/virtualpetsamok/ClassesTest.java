@@ -156,10 +156,4 @@ public class ClassesTest {
 		int check = underTest.getPetHealth();
 		assertEquals(0, check);
 	}
-	@Test
-	public void showIfPetIsDead() {
-		VirtualPet underTest = new RobotDog("Robodog", 10, 10, 0);
-		Boolean response = underTest.isAlive();
-		assertEquals(true, response);
-	}
 }

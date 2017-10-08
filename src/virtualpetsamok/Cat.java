@@ -1,6 +1,6 @@
 package virtualpetsamok;
 
-public class Cat extends VirtualPet{
+public class Cat extends VirtualPet {
 
 	public Cat(String name, int happiness, int health) {
 		super(name, happiness, health);
@@ -9,8 +9,8 @@ public class Cat extends VirtualPet{
 
 	@Override
 	public void tick() {
-		petHappiness-=1;
-		petHealth-=1;
+		petHappiness -= 1;
+		petHealth -= 1;
 	}
 
 }

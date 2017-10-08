@@ -1,9 +1,9 @@
 package virtualpetsamok;
 
 public abstract class VirtualPet {
-	public  String petName;
-	public  int petHappiness;
-	public  int petHealth;
+	public String petName;
+	public int petHappiness;
+	public int petHealth;
 
 	public VirtualPet(String name, int happiness, int health) {
 		petName = name;
@@ -36,16 +36,10 @@ public abstract class VirtualPet {
 	}
 
 	public void play() {
-		
-		petHappiness +=5;
+
+		petHappiness += 5;
 	}
 
 	public abstract void tick();
 
-	public Boolean isAlive() {
-		if (petHappiness > 0 && petHealth > 0) {
-		}
-		return true;
-	}
-	
 }
