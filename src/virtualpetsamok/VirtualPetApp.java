@@ -24,9 +24,8 @@ public class VirtualPetApp {
 				+ "9. Admit a pet\n\t" + "10. Show all pets.\n\t" + "11. Quit";
 		String userChoice;
 		while (myShelter.hasPets()) {
-			do {
-				System.out.println(showMenu);
-				userChoice = input.next();
+			do {System.out.println(showMenu);
+			userChoice = input.next();
 			} while (!userChoice.equals("1") && !userChoice.equals("2") && !userChoice.equals("3")
 					&& !userChoice.equals("4") && !userChoice.equals("5") && !userChoice.equals("6")
 					&& !userChoice.equals("7") && !userChoice.equals("8") && !userChoice.equals("9")
@@ -112,6 +111,7 @@ public class VirtualPetApp {
 				System.out.println("Welcome to your new home!" );
 				break;
 			case "10": 
+				myShelter.tickAllPets(pets);
 				System.out.println("These are the pets at our shelter:");
 				myShelter.showPets(pets);
 				break;

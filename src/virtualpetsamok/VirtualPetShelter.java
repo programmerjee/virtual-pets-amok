@@ -12,6 +12,7 @@ public class VirtualPetShelter {
 	public Collection<VirtualPet> availablePets() {
 		return myShelter.values();
 	}
+
 	public void addPet(VirtualPet adoptablePet) {
 		String petsAvailable = adoptablePet.getPetName();
 		myShelter.put(petsAvailable, adoptablePet);
@@ -25,10 +26,11 @@ public class VirtualPetShelter {
 
 		for (Entry<String, VirtualPet> entry : myShelter.entrySet()) {
 			entry.getValue();
-			System.out.println("Name : " + entry.getKey() + "\tHealth "
-					+ entry.getValue().getPetHealth() + "\tHappiness: " + entry.getValue().getPetHappiness());
+			System.out.println("Name : " + entry.getKey() + "\tHealth " + entry.getValue().getPetHealth()
+					+ "\tHappiness: " + entry.getValue().getPetHappiness());
 		}
 	}
+
 	public VirtualPet getPetNamed(String name) {
 		return myShelter.get(name);
 	}
@@ -40,7 +42,6 @@ public class VirtualPetShelter {
 				organicPet.feed();
 			}
 		}
-
 	}
 
 	public void tickAllPets(VirtualPet adoptablePet) {
@@ -76,9 +77,10 @@ public class VirtualPetShelter {
 	}
 
 	public boolean hasPets() {
-		
+
 		return !myShelter.isEmpty();
 	}
+
 	public void cleanCages() {
 		for (VirtualPet pet : availablePets()) {
 			if (pet instanceof OrganicDog) {
@@ -87,6 +89,7 @@ public class VirtualPetShelter {
 			}
 		}
 	}
+
 	public void emptyLitterBox() {
 		for (VirtualPet pet : availablePets()) {
 			if (pet instanceof OrganicCat) {
@@ -95,6 +98,7 @@ public class VirtualPetShelter {
 			}
 		}
 	}
+
 	public void walkDogs() {
 		for (VirtualPet pet : availablePets()) {
 			if (pet instanceof Dog) {
@@ -103,14 +107,10 @@ public class VirtualPetShelter {
 			}
 		}
 	}
+
 	public void showPetName(VirtualPet pets) {
 		for (Entry<String, VirtualPet> entry : myShelter.entrySet()) {
 			System.out.print(entry.getKey() + "\t");
 		}
 	}
-	//public VirtualPet getPetNamed(String chosenPet) {
-		
-		//return myShelter.get(name);
-	//}
 }
-

@@ -41,5 +41,11 @@ public abstract class VirtualPet {
 	}
 
 	public abstract void tick();
+
+	public Boolean isAlive() {
+		if (petHappiness > 0 && petHealth > 0) {
+		}
+		return true;
+	}
 	
 }
