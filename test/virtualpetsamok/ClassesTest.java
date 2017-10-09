@@ -54,7 +54,7 @@ public class ClassesTest {
 		VirtualPet underTest = new RobotDog(null, 10, 10, 10);
 		underTest.tick();
 		int response = underTest.getPetHappiness() + underTest.getPetHealth();
-		assertEquals(18, response);
+		assertEquals(19, response);
 	}
 
 	@Test
@@ -77,28 +77,28 @@ public class ClassesTest {
 		underTest.tick();
 		int check = underTest.getPetHappiness() + underTest.getPetHealth() + underTest.getHunger()
 				+ underTest.getThirst() + underTest.getCleanliness();
-		assertEquals(45, check);
+		assertEquals(46, check);
 	}
 	@Test
 	public void ocatTicksShouldReduceAllLevels() {
 		OrganicCat underTest = new OrganicCat("Scratchy", 10, 10, 10, 10, 10);
 		underTest.tick();
 		int check = underTest.getPetHappiness() + underTest.getPetHealth() + underTest.getHunger() + underTest.getThirst() + underTest.getCleanliness();
-		assertEquals(45, check);
+		assertEquals(46, check);
 	}
 	@Test
 	public void rDogTicksShouldReduceAllLevels() {
 		RobotDog underTest = new RobotDog("Robo", 10, 10, 10);
 		underTest.tick();
 		int check = underTest.getMaintenance() + underTest.getPetHappiness() + underTest.getPetHealth();
-		assertEquals(27, check);
+		assertEquals(28, check);
 	}
 	@Test
 	public void rCatTicksShouldReduceAllLevels(){
 		RobotCat underTest = new RobotCat("Robocat", 10, 10, 10);
 		underTest.tick();
 		int check = underTest.getMaintenance() + underTest.getPetHappiness() + underTest.getPetHealth();
-		assertEquals(27, check);
+		assertEquals(28, check);
 	}
 	@Test
 	public void shouldBeAbleToFeedOrganics() {
@@ -143,17 +143,10 @@ public class ClassesTest {
 		assertEquals(15, check);
 	}
 	@Test
-	public void variablesShouldAffectOHealth() {
-		OrganicCat underTest = new OrganicCat("Scratchy", 10, 10, 0, 0, 0);
-		underTest.checkHealth();
-		int check = underTest.getPetHealth();
-		assertEquals(0, check);
-	}
-	@Test
 	public void maintenanceShouldAffectHealth() {
 		RobotDog underTest = new RobotDog("Robodog", 10, 10, 0);
-		underTest.checkHealth();
+		underTest.tick();
 		int check = underTest.getPetHealth();
-		assertEquals(0, check);
+		assertEquals(9, check);
 	}
 }

@@ -20,19 +20,15 @@ public class RobotDog extends Dog implements RobotPet {
 
 	@Override
 	public void tick() {
-		petHealth -= 1;
 		petHappiness -= 1;
 		maintenance -= 1;
+		if (maintenance <=0 || petHappiness<=0) {
+			petHealth-=1;
+			}
 	}
 
 	public void oil() {
 		maintenance += 5;
-	}
-
-	public void checkHealth() {
-		if (maintenance == 0) {
-			petHealth = 0;
-		}
 	}
 
 	@Override

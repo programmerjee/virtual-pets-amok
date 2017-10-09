@@ -38,10 +38,14 @@ public class OrganicCat extends Cat implements Organic {
 
 	@Override
 	public void tick() {
-		super.tick();
+		petHappiness -=1;
 		hunger -= 1;
 		thirst -= 1;
 		cleanliness -= 1;
+		if (hunger <= 0 || thirst <=0 || cleanliness <=0 || petHappiness <=0) {
+			petHealth-=1;
+		}
+		
 	}
 
 	public void feed() {
@@ -54,12 +58,7 @@ public class OrganicCat extends Cat implements Organic {
 
 	public void emptyLitterBox() {
 		cleanliness += 5;
-	}
 
-	public void checkHealth() {
-		if (cleanliness == 0 || hunger == 0 || thirst == 0) {
-			petHealth = 0;
-		}
 	}
 
 }

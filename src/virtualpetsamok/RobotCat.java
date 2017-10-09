@@ -19,19 +19,15 @@ public class RobotCat extends Cat implements RobotPet {
 	@Override
 	public void tick() {
 		petHappiness -= 1;
-		petHealth -= 1;
-		maintenance -= 1;
+		maintenance -=1;
+		
+		if (maintenance <=0 || petHappiness<=0) {
+			petHealth-=1;
+		}
 	}
 
 	public void oil() {
 		maintenance += 5;
-	}
-
-	@Override
-	public void checkHealth() {
-		if (maintenance == 0) {
-			petHealth = 0;
-		}
 	}
 
 }

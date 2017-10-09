@@ -13,7 +13,6 @@ public abstract class Dog extends VirtualPet {
 	@Override
 	public void tick() {
 		petHappiness -= 1;
-		petHealth -= 1;
 	}
 
 	public abstract void cleanCages();
