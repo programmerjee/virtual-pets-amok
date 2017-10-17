@@ -8,14 +8,6 @@ public class RobotCat extends Cat implements RobotPet {
 		this.maintenance = maintenance;
 	}
 
-	public int getMaintenance() {
-		return maintenance;
-	}
-
-	public void setMaintenance(int maintenance) {
-		this.maintenance = maintenance;
-	}
-
 	@Override
 	public void tick() {
 		petHappiness -= 1;

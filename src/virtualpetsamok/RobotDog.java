@@ -10,14 +10,6 @@ public class RobotDog extends Dog implements RobotPet {
 
 	}
 
-	public int getMaintenance() {
-		return maintenance;
-	}
-
-	public void setMaintenance(int maintenance) {
-		this.maintenance = maintenance;
-	}
-
 	@Override
 	public void tick() {
 		petHappiness -= 1;
@@ -31,8 +23,5 @@ public class RobotDog extends Dog implements RobotPet {
 		maintenance += 5;
 	}
 
-	@Override
-	public void cleanCages() {
-	}
 
 }

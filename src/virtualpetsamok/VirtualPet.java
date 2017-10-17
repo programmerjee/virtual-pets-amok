@@ -1,9 +1,9 @@
 package virtualpetsamok;
 
 public abstract class VirtualPet {
-	public String petName;
-	public int petHappiness;
-	public int petHealth;
+	protected String petName;
+	protected int petHappiness;
+	protected int petHealth;
 
 	public VirtualPet(String name, int happiness, int health) {
 		petName = name;

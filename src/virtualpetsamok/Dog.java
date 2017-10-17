@@ -15,6 +15,4 @@ public abstract class Dog extends VirtualPet {
 		petHappiness -= 1;
 	}
 
-	public abstract void cleanCages();
-
 }
